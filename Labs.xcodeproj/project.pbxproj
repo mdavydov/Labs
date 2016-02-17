@@ -9,6 +9,10 @@
 /* Begin PBXFileReference section */
 		3843FF4D1C73255800FC5A8E /* time.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = time.html; sourceTree = "<group>"; };
 		3843FF4F1C73298500FC5A8E /* responsive.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = responsive.html; sourceTree = "<group>"; };
+		38DF12EC1C747C8000D25C14 /* myObject.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = myObject.txt; sourceTree = "<group>"; };
+		38DF12ED1C74A95900D25C14 /* small.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = small.html; sourceTree = "<group>"; };
+		38DF12EE1C74DB7200D25C14 /* types.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = types.html; sourceTree = "<group>"; };
+		38DF12EF1C74DBF100D25C14 /* request.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = request.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -31,7 +35,11 @@
 		3843FF4C1C73255800FC5A8E /* Example1 */ = {
 			isa = PBXGroup;
 			children = (
+				38DF12EF1C74DBF100D25C14 /* request.html */,
+				38DF12EE1C74DB7200D25C14 /* types.html */,
+				38DF12ED1C74A95900D25C14 /* small.html */,
 				3843FF4D1C73255800FC5A8E /* time.html */,
+				38DF12EC1C747C8000D25C14 /* myObject.txt */,
 			);
 			path = Example1;
 			sourceTree = "<group>";

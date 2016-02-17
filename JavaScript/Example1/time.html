@@ -17,49 +17,30 @@
             log('typeof stringvalue = ' + typeof stringvalue);
             log('typeof count = ' + typeof count);
             log('count = ' + count);
-        }
-    
-        function type_test()
-        {
-            log("type_test...");
-            try
-            {
-                log('typeof und = ' + typeof und);
-                log('typeof typeof und = ' + typeof typeof und);
-                log('typeof 1 = ' + typeof 1);
-                log('typeof "1" = ' + typeof "1");
-                //log('typeof /s/g = ' + typeof /s/g);
-                log('typeof [1, 2, 3] = ' + typeof [1,2,3]);
-                log('typeof null = ' + typeof null);
-                log('typeof {"name":1} = ' + typeof {"name":1});
-                log("typeof function(a,b) { return a + b; } = " + typeof function(a,b) { return a + b; });
-            }
-            catch(err)
-            {
-                log('error = ' + err);
-            }
-        }
-    
-        function function_test()
-        {
-            log("function_test...");
-            var f = function(a,b) { return a + b; }
-            var f1 = f;
-            log(f1(3,5));
             
-            f = function(a,b) { return a - b; }
+            var start = new Date().getTime();
+            var sum = 0;
+            for(var i=1;i<=count;++i)
+            {
+                sum += 1/i;
+            }
+            var end = new Date().getTime();
+            log("Result = " + sum + " time = " + (end-start) + " ms");
             
-            log(f(3,5));
-            log(f1(3,5));
-
+            start = new Date().getTime();
+            sum = 0;
+            for(var i=1;i<=stringvalue;++i)
+            {
+                sum += 1/i;
+            }
+            end = new Date().getTime();
+            log("Result2 = " + sum + " time2 = " + (end-start) + " ms");
         }
     </script>
     <body>
-    <input id="count"></input>
+    <input id="count" value="1000000"></input>
     <button onclick="test()">test</button>
     
     <p id="debug"></p>
-    
-    <script>type_test(); function_test();</script>
     </body>
 </html>

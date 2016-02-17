@@ -1,0 +1,22 @@
+<html>
+    <script>
+        "use strict";
+        function log(a)
+        {
+            var debug = document.getElementById("debug");
+            debug.innerHTML += a + '<br>';
+            console.log(a);
+            //debugger;
+        }
+    </script>
+    
+ <body>
+     <script> log('This text is not displayed'); </script>
+
+    <p id="debug"></p>
+    
+     <script> log('Hello'); </script>
+ </body>
+</html>
+
+

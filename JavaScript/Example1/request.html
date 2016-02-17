@@ -1,0 +1,85 @@
+<html>
+    <script>
+        "use strict";
+        function log(a)
+        {
+            var debug = document.getElementById("debug");
+            debug.innerHTML += (a===undefined?'':a) + '<br>';
+            console.log(a);
+            //debugger;
+        }
+    
+        function toString(obj)
+        {
+            var ret = "{ ";
+            for(var member in obj)
+            {
+                ret += (ret.length > 2?", ":"") + member + " = " + obj[member];
+            }
+            ret += " }";
+            return ret;
+        }
+    
+        function request_test()
+        {
+            log("Objects can be read from XML");
+            var xmlhttp = new XMLHttpRequest();
+            //var url = "myObject.txt";
+            var url = "http://www.w3schools.com/website/customers_mysql.php";
+            xmlhttp.onreadystatechange = function()
+            {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                {
+                    log("Obtained responce...");
+                    log(xmlhttp.responseText);
+                    var arrReadFromXml = JSON.parse(xmlhttp.responseText);
+                    log();
+                    log("Reading array from JSON...");
+                    
+                    for(var member in arrReadFromXml)
+                    {
+                        log(member + " = " + toString(arrReadFromXml[member]));
+                    }
+                }
+                else
+                {
+                    log("xmlhttp.status = " + xmlhttp.status + " " + xmlhttp.readyState);
+                }
+            };
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+        }
+    
+        function other_request_test()
+        {
+            log("<br>other_request_test()");
+            var xmlhttp = new XMLHttpRequest();
+            //var url = "myObject.txt";
+            var url = "http://google.com";
+            xmlhttp.onreadystatechange = function()
+            {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                {
+                    log("Obtained responce from " + url + "...");
+                    // we chould use createTextNode to ignore html special symbols
+                    document.getElementById("debug2").appendChild(document.createTextNode(xmlhttp.responseText));
+                }
+                else
+                {
+                    log("xmlhttp.status = " + xmlhttp.status + " " + xmlhttp.readyState);
+                }
+            };
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+        }
+    
+    </script>
+    <body>
+    
+    <p id="debug"></p>
+    
+    <p id="debug2"></p>
+    
+    <script>request_test(); other_request_test();</script>
+    </body>
+</html>
