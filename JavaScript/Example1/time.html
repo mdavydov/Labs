@@ -8,6 +8,33 @@
             console.log(a);
             //debugger;
         }
+    
+        function sumf(count)
+        {
+            var sum = 0;
+            for(var i=1;i<=count;++i)
+            {
+                sum += 1/i;
+            }
+            return sum;
+        }
+    
+        function sumf2(scount)
+        {
+            var sum = 0;
+            var count = Number.parseInt(scount);
+            for(var i=1;i<=count;++i)
+            {
+                sum += 1/i;
+            }
+            return sum;
+        }
+    
+        function inv(number)
+        {
+            return 1/number;
+        }
+    
         function test()
         {
             var debug = document.getElementById("debug");
@@ -18,6 +45,8 @@
             log('typeof count = ' + typeof count);
             log('count = ' + count);
             
+            log("sum using number... ");
+            
             var start = new Date().getTime();
             var sum = 0;
             for(var i=1;i<=count;++i)
@@ -27,6 +56,7 @@
             var end = new Date().getTime();
             log("Result = " + sum + " time = " + (end-start) + " ms");
             
+            log("use string instead of number... ");
             start = new Date().getTime();
             sum = 0;
             for(var i=1;i<=stringvalue;++i)
@@ -35,6 +65,34 @@
             }
             end = new Date().getTime();
             log("Result2 = " + sum + " time2 = " + (end-start) + " ms");
+            
+            log("use function for inverse... ");
+            start = new Date().getTime();
+            sum = 0;
+            for(var i=1;i<=count;++i)
+            {
+                sum += inv(i);
+            }
+            end = new Date().getTime();
+            log("Result2 = " + sum + " time2 = " + (end-start) + " ms");
+            
+            log("use function for entire loop...");
+            start = new Date().getTime();
+            sum = sumf(count);
+            end = new Date().getTime();
+            log("Result4 = " + sum + " time4 = " + (end-start) + " ms");
+            
+            log("use function with string...");
+            start = new Date().getTime();
+            sum = sumf(stringvalue);
+            end = new Date().getTime();
+            log("Result4 = " + sum + " time4 = " + (end-start) + " ms");
+            
+            log("use optimized function with string...");
+            start = new Date().getTime();
+            sum = sumf2(stringvalue);
+            end = new Date().getTime();
+            log("Result4 = " + sum + " time4 = " + (end-start) + " ms");
         }
     </script>
     <body>

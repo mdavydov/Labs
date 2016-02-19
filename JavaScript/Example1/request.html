@@ -25,6 +25,7 @@
             log("Objects can be read from XML");
             var xmlhttp = new XMLHttpRequest();
             //var url = "myObject.txt";
+            // this url uses <?php header("Access-Control-Allow-Origin: *"); ?> to allow this request
             var url = "http://www.w3schools.com/website/customers_mysql.php";
             xmlhttp.onreadystatechange = function()
             {
