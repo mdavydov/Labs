@@ -62,6 +62,9 @@
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
                 {
                     log("Obtained responce from " + url + "...");
+                    
+                    //document.getElementById("debug2").appendChild(xmlhttp.getAllResponseHeaders().toString());
+                    
                     // we chould use createTextNode to ignore html special symbols
                     document.getElementById("debug2").appendChild(document.createTextNode(xmlhttp.responseText));
                 }

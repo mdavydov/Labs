@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		3811AADD1C7DDF2100C96786 /* excl.svg */ = {isa = PBXFileReference; explicitFileType = text.xml; path = excl.svg; sourceTree = "<group>"; };
+		3811AADE1C7DDF9600C96786 /* responsive.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = responsive.css; sourceTree = "<group>"; };
+		3811AADF1C7DF44900C96786 /* good.svg */ = {isa = PBXFileReference; explicitFileType = text.xml; path = good.svg; sourceTree = "<group>"; };
+		3811AAE01C7E024600C96786 /* recursion.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = recursion.html; sourceTree = "<group>"; };
 		3843FF4D1C73255800FC5A8E /* time.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = time.html; sourceTree = "<group>"; };
 		3843FF4F1C73298500FC5A8E /* responsive.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = responsive.html; sourceTree = "<group>"; };
 		3883E06F1C77080500AAB775 /* double_test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = double_test.cpp; sourceTree = "<group>"; };
@@ -39,6 +43,7 @@
 				38DF12EF1C74DBF100D25C14 /* request.html */,
 				38DF12EE1C74DB7200D25C14 /* types.html */,
 				38DF12ED1C74A95900D25C14 /* small.html */,
+				3811AAE01C7E024600C96786 /* recursion.html */,
 				3843FF4D1C73255800FC5A8E /* time.html */,
 				38DF12EC1C747C8000D25C14 /* myObject.txt */,
 				3883E06F1C77080500AAB775 /* double_test.cpp */,
@@ -50,6 +55,9 @@
 			isa = PBXGroup;
 			children = (
 				3843FF4F1C73298500FC5A8E /* responsive.html */,
+				3811AADD1C7DDF2100C96786 /* excl.svg */,
+				3811AADF1C7DF44900C96786 /* good.svg */,
+				3811AADE1C7DDF9600C96786 /* responsive.css */,
 			);
 			path = "Example2 Responsive";
 			sourceTree = "<group>";

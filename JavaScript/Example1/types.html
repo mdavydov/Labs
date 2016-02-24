@@ -18,12 +18,14 @@
                 log('typeof typeof und = ' + typeof typeof und);
                 log('typeof 1 = ' + typeof 1);
                 log('typeof "1" = ' + typeof "1");
-                log('typeof "1" + 1 = ' + typeof "1"+1 );
+                log('("1" + 1) = ' + ("1"+1) );
+                log('typeof ("1" + 1) = ' + typeof ("1"+1) );
                 log('typeof /s/g = ' + typeof /s/g);
                 log('typeof [1, 2, 3] = ' + typeof [1,2,3]);
                 log('typeof null = ' + typeof null);
                 log('typeof {"name":1} = ' + typeof {"name":1});
                 log("typeof function(a,b) { return a + b; } = " + typeof function(a,b) { return a + b; });
+                log('typeof (1==1) = ' + typeof (1==1));
                 
                 log('{"1":"2"} instanceof Array = ' + ({"1":"2"} instanceof Array));
                 log('{"1":"2"} instanceof Object = ' + ({"1":"2"} instanceof Object));

@@ -1,0 +1,48 @@
+<html>
+    <script>
+        "use strict";
+        function log(a)
+        {
+            var debug = document.getElementById("debug");
+            debug.innerHTML += a + '<br>';
+            console.log(a);
+            //debugger;
+        }
+    
+        var fs = [];
+    
+        function factorial(n)
+        {
+            var local = n;
+            var localf = function () {return local;}
+            fs.push(localf);
+            
+            var retval = n==0?1 : n*factorial(n-1);
+            
+            local = "This is factorial(" + n + ")";
+            
+            return retval;
+        }
+    
+        function recursion_test()
+        {
+            log("recursion_test...");
+            log(fs);
+            log("10! = " + factorial(10));
+            
+            log("if you create a function inside a function, it captures local content:");
+            for(var i in fs)
+            {
+                log("fs[i]() = " + fs[i]());
+            }
+        }
+    </script>
+    <body>
+    <input id="count" value="1000000"></input>
+    <button onclick="test()">test</button>
+    
+    <p id="debug"></p>
+    
+    <script>recursion_test();</script>
+    </body>
+</html>
