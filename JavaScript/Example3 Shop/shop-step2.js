@@ -36,7 +36,8 @@
 	$("buybutton").onclick = function()
 	{
 		$('dialogprice').innerHTML = calculatePrice()[0].toFixed(2);
-		$('buydialog').style.display='block'; }
+		$('buydialog').style.display='block';
+	}
 
     var itemcontainer = $("itemcontainer");
 	itemcontainer.innerHTML = '<hr>';
