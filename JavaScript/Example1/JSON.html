@@ -1,0 +1,34 @@
+<html>
+    <script>
+        "use strict";
+        function log(a)
+        {
+            var debug = document.getElementById("debug");
+            debug.innerHTML += a + '<br>';
+            console.log(a);
+            //debugger;
+        }
+    
+        function JSON_test()
+        {
+            log("JSON_test...");
+            var obj = {name:'Max', surname:'Davydov', password:'$"\'\n\r!@#$%^&*', fullName:function(){ return this.name + " " + this.surname; }};
+            log(obj.fullName());
+            
+            log("obj JSON = " + JSON.stringify(obj));
+            
+            var obj1 = Object.create(obj);
+            obj1.name = 'Maksym';
+            
+            log(obj1.surname);
+            
+            log(15*178);
+        }
+       
+    </script>
+    <body>
+    <p id="debug"></p>
+    
+    <script>JSON_test();</script>
+    </body>
+</html>

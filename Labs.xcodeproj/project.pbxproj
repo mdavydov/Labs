@@ -11,13 +11,21 @@
 		3811AADE1C7DDF9600C96786 /* responsive.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = responsive.css; sourceTree = "<group>"; };
 		3811AADF1C7DF44900C96786 /* good.svg */ = {isa = PBXFileReference; explicitFileType = text.xml; path = good.svg; sourceTree = "<group>"; };
 		3811AAE01C7E024600C96786 /* recursion.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = recursion.html; sourceTree = "<group>"; };
+		383A051D1C8330F2008DB59E /* qunit.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = qunit.html; sourceTree = "<group>"; };
 		3843FF4D1C73255800FC5A8E /* time.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = time.html; sourceTree = "<group>"; };
 		3843FF4F1C73298500FC5A8E /* responsive.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = responsive.html; sourceTree = "<group>"; };
 		3883E06F1C77080500AAB775 /* double_test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = double_test.cpp; sourceTree = "<group>"; };
+		38C54E371C83031400B0E2E5 /* JSON.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = JSON.html; sourceTree = "<group>"; };
 		38DF12EC1C747C8000D25C14 /* myObject.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = myObject.txt; sourceTree = "<group>"; };
 		38DF12ED1C74A95900D25C14 /* small.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = small.html; sourceTree = "<group>"; };
 		38DF12EE1C74DB7200D25C14 /* types.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = types.html; sourceTree = "<group>"; };
 		38DF12EF1C74DBF100D25C14 /* request.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = request.html; sourceTree = "<group>"; };
+		38F2370C1C8702E70070F012 /* Smile1.svg */ = {isa = PBXFileReference; explicitFileType = text.xml; path = Smile1.svg; sourceTree = "<group>"; };
+		38F2370D1C8703AF0070F012 /* Smile2.svg */ = {isa = PBXFileReference; explicitFileType = text.xml; path = Smile2.svg; sourceTree = "<group>"; };
+		38F2370E1C8703DD0070F012 /* Smile3.svg */ = {isa = PBXFileReference; explicitFileType = text.xml; path = Smile3.svg; sourceTree = "<group>"; };
+		38F2370F1C87072D0070F012 /* shop-step1.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "shop-step1.html"; sourceTree = "<group>"; };
+		38F237101C87072D0070F012 /* shop-step2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "shop-step2.html"; sourceTree = "<group>"; };
+		38F237111C8708D10070F012 /* shop-step2.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "shop-step2.js"; sourceTree = "<group>"; usesTabs = 1; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -31,6 +39,7 @@
 		3843FF4B1C73255800FC5A8E /* JavaScript */ = {
 			isa = PBXGroup;
 			children = (
+				38F2370A1C8701060070F012 /* Example3 Shop */,
 				3843FF4E1C73298500FC5A8E /* Example2 Responsive */,
 				3843FF4C1C73255800FC5A8E /* Example1 */,
 			);
@@ -40,7 +49,10 @@
 		3843FF4C1C73255800FC5A8E /* Example1 */ = {
 			isa = PBXGroup;
 			children = (
+				38F237091C8700670070F012 /* Example3 Shop */,
 				38DF12EF1C74DBF100D25C14 /* request.html */,
+				38C54E371C83031400B0E2E5 /* JSON.html */,
+				383A051D1C8330F2008DB59E /* qunit.html */,
 				38DF12EE1C74DB7200D25C14 /* types.html */,
 				38DF12ED1C74A95900D25C14 /* small.html */,
 				3811AAE01C7E024600C96786 /* recursion.html */,
@@ -55,11 +67,32 @@
 			isa = PBXGroup;
 			children = (
 				3843FF4F1C73298500FC5A8E /* responsive.html */,
+				3811AADE1C7DDF9600C96786 /* responsive.css */,
 				3811AADD1C7DDF2100C96786 /* excl.svg */,
 				3811AADF1C7DF44900C96786 /* good.svg */,
-				3811AADE1C7DDF9600C96786 /* responsive.css */,
 			);
 			path = "Example2 Responsive";
+			sourceTree = "<group>";
+		};
+		38F237091C8700670070F012 /* Example3 Shop */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Example3 Shop";
+			path = "JavaScript/Example3 Shop";
+			sourceTree = SOURCE_ROOT;
+		};
+		38F2370A1C8701060070F012 /* Example3 Shop */ = {
+			isa = PBXGroup;
+			children = (
+				38F2370F1C87072D0070F012 /* shop-step1.html */,
+				38F237101C87072D0070F012 /* shop-step2.html */,
+				38F237111C8708D10070F012 /* shop-step2.js */,
+				38F2370C1C8702E70070F012 /* Smile1.svg */,
+				38F2370D1C8703AF0070F012 /* Smile2.svg */,
+				38F2370E1C8703DD0070F012 /* Smile3.svg */,
+			);
+			path = "Example3 Shop";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
