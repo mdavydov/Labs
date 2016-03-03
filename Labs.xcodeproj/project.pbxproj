@@ -20,6 +20,9 @@
 		38DF12ED1C74A95900D25C14 /* small.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = small.html; sourceTree = "<group>"; };
 		38DF12EE1C74DB7200D25C14 /* types.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = types.html; sourceTree = "<group>"; };
 		38DF12EF1C74DBF100D25C14 /* request.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = request.html; sourceTree = "<group>"; };
+		38EEED6E1C88A8B40091759B /* shop-step3.php */ = {isa = PBXFileReference; lastKnownFileType = text.script.php; path = "shop-step3.php"; sourceTree = "<group>"; };
+		38EEED6F1C88A9F80091759B /* shop-step3.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "shop-step3.html"; sourceTree = "<group>"; };
+		38EEED701C88A9F80091759B /* shop-step3.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "shop-step3.js"; sourceTree = "<group>"; };
 		38F2370C1C8702E70070F012 /* Smile1.svg */ = {isa = PBXFileReference; explicitFileType = text.xml; path = Smile1.svg; sourceTree = "<group>"; };
 		38F2370D1C8703AF0070F012 /* Smile2.svg */ = {isa = PBXFileReference; explicitFileType = text.xml; path = Smile2.svg; sourceTree = "<group>"; };
 		38F2370E1C8703DD0070F012 /* Smile3.svg */ = {isa = PBXFileReference; explicitFileType = text.xml; path = Smile3.svg; sourceTree = "<group>"; };
@@ -88,6 +91,9 @@
 				38F2370F1C87072D0070F012 /* shop-step1.html */,
 				38F237101C87072D0070F012 /* shop-step2.html */,
 				38F237111C8708D10070F012 /* shop-step2.js */,
+				38EEED6F1C88A9F80091759B /* shop-step3.html */,
+				38EEED701C88A9F80091759B /* shop-step3.js */,
+				38EEED6E1C88A8B40091759B /* shop-step3.php */,
 				38F2370C1C8702E70070F012 /* Smile1.svg */,
 				38F2370D1C8703AF0070F012 /* Smile2.svg */,
 				38F2370E1C8703DD0070F012 /* Smile3.svg */,
