@@ -40,7 +40,7 @@
 	}
 
     var itemcontainer = $("itemcontainer");
-	itemcontainer.innerHTML = '<hr>';
+	itemcontainer.appendChild(document.createElement('hr'));
 
     for(var i in myitems)
     {
@@ -50,21 +50,22 @@
         var nameid = "itemname_"+i;
         var textid = "itemtext_"+i;
         var checkid = "itemcheck_"+i;
-
-        itemcontainer.innerHTML +=	'<div class="w3-row"><div class="w3-col s4 m2">' +
-									'<img src="' + item.icon + '" style="width:100%"></img></div>' +
-									'<div class="w3-col s8 m7 w3-container"><h3 id="'+nameid+'"></h3>' +
-									'<p id="'+textid+'"></p></div><div class="w3-col s12 m3 w3-container">' +
-									'<h3><input id="' + checkid + '" type="checkbox"></input>&nbsp;'+item.price+' грн.</h3></div></div><hr>';
+ 
+		var div = document.createElement('div');
+		div.className = "w3-row";
+		div.innerHTML = '<div class="w3-col s4 m2">' +
+						'<img src="' + item.icon + '" style="width:100%"></img></div>' +
+						'<div class="w3-col s8 m7 w3-container"><h3 id="'+nameid+'"></h3>' +
+						'<p id="'+textid+'"></p></div><div class="w3-col s12 m3 w3-container">' +
+						'<h3><input id="' + checkid + '" type="checkbox"></input>&nbsp;'+item.price+' грн.</h3></div>';
+ 
+		itemcontainer.appendChild(div);
+		itemcontainer.appendChild(document.createElement('hr'));
 
         $(nameid).appendChild(document.createTextNode(item.name));
         $(textid).appendChild(document.createTextNode(item.desc));
-    }
-	
-	for(var i in myitems)
-	{
 		$("itemcheck_"+i).onchange = selection_change_f;
-	}
+    }
 	
 	selection_change_f();
 })();

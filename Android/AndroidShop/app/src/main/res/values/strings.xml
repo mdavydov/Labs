@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TestShop</string>
+    <string name="item">ItemString</string>
+</resources>
