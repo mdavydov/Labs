@@ -8,13 +8,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+import java.util.Vector;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener
+{
 
     ViewGroup m_my_list;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -22,28 +29,59 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         LayoutInflater l = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        m_my_list.addView(l.inflate( R.layout.list_item, null));
-        m_my_list.addView(l.inflate( R.layout.list_item, null));
-        m_my_list.addView(l.inflate( R.layout.list_item, null));
-        m_my_list.addView(l.inflate( R.layout.list_item, null));
-        m_my_list.addView(l.inflate( R.layout.list_item, null));
-        m_my_list.addView(l.inflate( R.layout.list_item, null));
-        m_my_list.addView(l.inflate( R.layout.list_item, null));
 
+        Vector<String> strings = new Vector<String>();
+        for(int i=0;i<100;++i)
+        {
+            strings.add("Item " + i);
+        }
 
-        findViewById(R.id.button1).setOnClickListener(this);
+        for(String s : strings)
+        {
+            View item = l.inflate( R.layout.list_item, null);
+            ((TextView)item.findViewById(R.id.itemtext)).setText(s);
+            item.findViewById(R.id.morebutton).setOnClickListener(this);
+            m_my_list.addView(item);
+        }
+
+        findViewById(R.id.detail).setOnClickListener(this);
     }
 
     public void onClick(View v)
     {
-        if (v.getId()==R.id.button1)
+        if (v.getId()==R.id.morebutton)
         {
-            AlphaAnimation anim = new AlphaAnimation(0,1);
+            View detailview = findViewById(R.id.detail);
+            float width = findViewById(R.id.main_layout).getWidth();
+            TranslateAnimation anim = new TranslateAnimation(width, 0.0f, 0.0f, 0.0f);
             anim.setDuration(300);
             anim.setFillAfter(true);
+            detailview.bringToFront();
+            detailview.startAnimation(anim);
+            detailview.setVisibility(View.VISIBLE);
+            detailview.setEnabled(true);
+        }
+        else if (v.getId()==R.id.detail && v.isEnabled())
+        {
+            View detailview = v;
+            TranslateAnimation anim = new TranslateAnimation(0.0f, detailview.getWidth(), 0.0f, 0.0f);
+            anim.setAnimationListener(new Animation.AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {}
 
-            findViewById(R.id.detail).startAnimation(anim);
-            findViewById(R.id.detail).setVisibility(View.VISIBLE);
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    findViewById(R.id.listview).bringToFront();
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {}
+            });
+            anim.setDuration(300);
+            anim.setFillAfter(true);
+            detailview.startAnimation(anim);
+            detailview.setEnabled(false);
+
         }
     }
 }
