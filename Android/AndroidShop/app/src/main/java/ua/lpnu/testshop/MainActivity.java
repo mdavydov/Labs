@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         LayoutInflater l = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-
         Vector<String> strings = new Vector<String>();
         for(int i=0;i<100;++i)
         {
@@ -61,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             detailview.setVisibility(View.VISIBLE);
             detailview.setEnabled(true);
         }
-        else if (v.getId()==R.id.detail && v.isEnabled())
+        else if (v.getId()==R.id.detail)
         {
             View detailview = v;
             TranslateAnimation anim = new TranslateAnimation(0.0f, detailview.getWidth(), 0.0f, 0.0f);
@@ -81,7 +80,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             anim.setFillAfter(true);
             detailview.startAnimation(anim);
             detailview.setEnabled(false);
-
         }
     }
 }
